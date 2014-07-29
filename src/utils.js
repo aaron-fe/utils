@@ -51,6 +51,22 @@
 
                 return ret + '...';
             }
+        },
+        array: {
+            shuffle: function (array) {
+                var len = array.length,
+                    temp, i;
+
+                while (len) {
+                    i = Math.floor(Math.random() * len--);
+
+                    temp = array[len];
+                    array[len] = array[i];
+                    array[i] = temp;
+                }
+
+                return array;
+            }
         }
     };
 
